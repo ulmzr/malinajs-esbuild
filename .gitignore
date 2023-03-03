@@ -1,9 +1,9 @@
 node_modules/
+.gitignore
+_*.*
 github/
 github*.*
 test/
-.gitignore
-_*.*
 
 
 
