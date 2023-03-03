@@ -1,9 +1,9 @@
 node_modules/
-.*
-_*.*
 github/
 github*.*
 test/
+.*
+_*.*
 
 
 

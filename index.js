@@ -5,7 +5,6 @@ const malina = require("malinajs");
 const { WebSocketServer } = require("ws");
 const chokidar = require("chokidar");
 const esbuild = require("esbuild");
-const { send } = require("node:process");
 
 const cwd = process.cwd();
 const esbuildConfigPath = path.join(cwd, "esbuild.config.js");
