@@ -1,0 +1,31 @@
+{
+   "name": "malinajs-esbuild-template",
+   "version": "1.0.0",
+   "description": "Malina esbuild template",
+   "main": "index.js",
+   "scripts": {
+      "dev": "node index --dev",
+      "build": "node index"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/ulmzr/malinajs-esbuild-template.git"
+   },
+   "author": "Yulmizar",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/ulmzr/malinajs-esbuild-template/issues"
+   },
+   "homepage": "https://github.com/ulmzr/malinajs-esbuild-template#readme",
+   "dependencies": {
+      "chokidar": "^3.5.3",
+      "esbuild": "^0.17.10",
+      "node-sass": "^8.0.0",
+      "sass": "^1.58.3",
+      "ws": "^8.12.1"
+   },
+   "devDependencies": {
+      "malinajs": "^0.6.64",
+      "malinajs-esbuild": "^1.0.2"
+   }
+}
