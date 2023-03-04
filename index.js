@@ -105,13 +105,14 @@ if (DEV) {
    // Start watching
    var hot;
 
-   const _src = chokidar.watch(["src"], {
+   const _src = chokidar.watch([path.join(cwd, "src")], {
       ignored: /(^|[\/\\])\../,
       persistent: true,
       cwd: __dirname,
    });
 
    _src.on("change", async (path) => {
+      console.log(path);
       if (!socket) return;
       hot = false;
       path = path.replace(/(\\\\|\\)/g, "/");
@@ -121,13 +122,14 @@ if (DEV) {
       }
    });
 
-   const _public = chokidar.watch([publicDir], {
+   const _public = chokidar.watch([path.join(cwd, publicDir)], {
       ignored: /(^|[\/\\])\../,
       persistent: true,
       cwd: __dirname,
    });
 
    _public.on("change", (path) => {
+      console.log(path);
       if (!socket) return;
       path = path.replace(/(\\\\|\\)/g, "/");
       if (path.match(/^.*\.(scss|css)$/)) hot = true;
@@ -231,6 +233,7 @@ s.onclose =_=> {
    run()
 }
 s.onmessage = e => {
+   console.log(e);
    const updated = JSON.parse(e.data)
    if(!updated.hot)location.reload()
    const link = document.querySelector('link[href*="' + updated.change + '"]')
