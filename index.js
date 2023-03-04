@@ -112,7 +112,6 @@ if (DEV) {
    });
 
    _src.on("change", async (path) => {
-      console.log(path);
       if (!socket) return;
       hot = false;
       path = path.replace(/(\\\\|\\)/g, "/");
@@ -129,7 +128,6 @@ if (DEV) {
    });
 
    _public.on("change", (path) => {
-      console.log(path);
       if (!socket) return;
       path = path.replace(/(\\\\|\\)/g, "/");
       if (path.match(/^.*\.(scss|css)$/)) hot = true;
